@@ -1,38 +1,377 @@
-.App {
+.nav-bar {
+  display: flex;
+  padding: 8px 16px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #3e3f56;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.ham-menu,
+.nav-list,
+.search-bar {
+  width: 33.33%;
+}
+
+.ham-menu i {
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.search-bar {
+  padding: 4px;
+  background: #fff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-bar input {
+  padding: 6px;
+  border: none;
+  outline: none;
+  width: 400px;
+  font-size: 1.1rem;
+}
+
+.search-bar button {
+  border: none;
+  outline: none;
+  background: rgb(255, 145, 0);
+  color: #fff;
+  padding: 8px 24px;
   text-align: center;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-bar button:hover {
+  background: rgb(228, 135, 14);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 32px;
+  padding-right: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-list h6 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.nav-list img {
+  width: 30px;
+}
+
+header {
+  text-align: center;
+  padding-top: 130px;
+  padding-bottom: 60px;
+}
+
+header div {
+  position: relative;
+}
+
+header h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #3e3f56;
+  margin-bottom: 16px;
+}
+
+header h4 {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+header img {
+  position: absolute;
+  left: 23%;
+  width: 8%;
+}
+
+.main-product {
+  display: flex;
+  padding: 16px 40px;
+  background: #f6f6f6;
+}
+
+.main-product img,
+.pr-details,
+.pr-status {
+  width: 33.33%;
+}
+
+.main-product img {
+  width: 26%;
+  margin-right: 24px;
+}
+
+.pr-details {
+  padding-right: 30px;
+}
+
+p {
+  font-size: 1.18rem;
+}
+
+.pr-details h6 {
+  margin-top: 12px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #d2d2d2;
+  margin-bottom: 10px;
+}
+
+.pr-details .price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.pr-details .price img{
+  width: 32px;  
+}
+
+.pr-details .price h3 {
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin-left: -10px;
+  text-decoration: line-through;
+}
+
+.details-a {
+  font-size: 1.2rem;
+  text-decoration: underline;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.link {
+  margin-top: 56px;
+}
+
+.pr-status {
+  margin-left: 40px;
+  border-left: 1px solid rgb(201, 201, 201);
+  padding: 0 30px;
+}
+
+.pr-status h3 {
+  font-size: 2.3rem;
+font-weight: 600;
+color: #3e3f56;
+margin-left: -12px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.status img {
+  width: 24px;
+}
+
+.live {
+  color: red;
+  font-size: 1.7rem;
+  margin-top: 4px;
+}
+
+.bids {
+  margin-top: 80px;
+}
+
+.bids h2 {
+  color: #d2d2d2;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 2.3rem;
+}
+
+.bids span {
+  color: #44DA6B;
+  border-left: 2.4px solid rgb(205, 205, 205) ;
+  padding-left: 10px;
+}
+
+.product-cards {
+  margin-top: 40px;
+  padding: 40px;
+  display: flex;
+}
+
+.product-item {
+  width: 33.33%;
+  border-right: 1px solid rgb(201, 201, 201);
+  position: relative;
+  padding-left: 40px;
+  padding-bottom: 30px;
+}
+
+.product-item:nth-child(3) {
+  border-right: none;
+}
+
+.product-item h2 {
+  color: rgb(255, 145, 0);
+  margin-top: 6px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-left: 60px;
+  margin-bottom: 10px;
+}
+
+.del-status {
+  display: flex;
+  gap: 8px;
+  align-items:flex-start;
+  margin: 16px 0;
+}
+
+.del-name {
+  margin-top: -4px;
+}
+
+.del-name h4 {
+  font-weight: 400;
+  color: #999999;
+}
+
+.del-name p {
+  font-size: 0.7rem;
+  color: #999999;
+}
+
+.status {
+  width: 22px;
+  margin-left: 12px;
+}
+
+.btn-blue {
+  border: none;
+  outline: none;
+  padding: 8px 14px;
+  font-size: 1rem;
+  background: #48a0ff;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-blue ~ p {
+  font-size: 1rem;
+  color: #626262;
+  margin-bottom: 26px;
+}
+
+.btn-orange {
+  border: none;
+  outline: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  background: rgb(255, 158, 30);
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.btn-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-div {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  width: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.image-div img {
+  width: 98px;
+  margin-bottom: 6px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-div p{
+  font-size: 0.9rem;
+}
+
+.btn-flex ~ h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.alt-pro img{
+  width: 120px;
+}
+
+.alt-pro {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  background: #f3f3f3;
+  padding: 6px;
+  width: 98%;
+}
+
+.alt-pro p {
+  font-size: 0.8rem;
+}
+
+.alt-details {
+  padding: 4px 0;
+}
+
+.alt-price {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.alt-price img {
+  width: 20px;
+}
+
+.alt-price h4 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+.alt-price h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.alt-price .btn-orange {
+  font-size: 0.8rem;
+  padding: 8px 10px;
+  margin-left: 8px;
 }
